@@ -173,4 +173,29 @@ Returns `201 Created` with the saved record, `400 Bad Request` for invalid input
 3. Before the first deployment, run `npm run db:deploy` from a machine with the production database URL set. This applies the committed Prisma migrations.
 4. Deploy. Vercel installs dependencies, generates Prisma Client and builds the Next.js app.
 
-Use the provider's pooled connection string for the deployed app if its documentation recommends one for serverless functions. Keep passwords out of Git and screenshots.
+## Live Deployment
+
+The TNP Placement Drive Manager is deployed and accessible online through Vercel.
+
+Live Website: https://tnp-placement-drive-manger.vercel.app/
+
+You can visit the website from any device with an internet connection without installing or running the project locally.
+
+Deployment Details
+Hosting Platform: Vercel
+Database: PostgreSQL hosted on Neon
+Framework: Next.js
+Database ORM: Prisma
+Source Code: GitHub
+Database Configuration
+
+The application uses a hosted PostgreSQL database on Neon to store placement drive information. The database connection is configured through the DATABASE_URL environment variable in Vercel.
+
+For local development, configure DATABASE_URL in your local .env file. Never commit database credentials or environment files containing secrets to GitHub.
+
+Access the Application
+
+Visit the live website:
+
+https://tnp-placement-drive-manger.vercel.app/
+
